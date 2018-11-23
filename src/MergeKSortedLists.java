@@ -37,13 +37,30 @@ public class MergeKSortedLists {
 //        return fakeStart.next;
 //    }
 
+    //Divided and conquer method
     public ListNode mergeKLists(ListNode[] lists) {
-
-        
-
-        return null;
+        return mergeKListsHelper(lists, 0, lists.length);
     }
 
+    public ListNode mergeKListsHelper(ListNode[] lists, int start, int end){
+        if (end == start || lists == null) return null;
+        else if (end - start == 1) return lists[start];
+        else if (end - start == 2) return mergeTwoLists(lists[start], lists[start+1]);
+        else return mergeTwoLists(mergeKListsHelper(lists, start, start + (end - start) / 2), mergeKListsHelper(lists, start + (end - start) / 2, end));
+    }
+
+
+    //Leetcode problem 21
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        if (l1 == null || l2 == null) return l1 == null ? l2 : l1;
+        if (l1.val < l2.val){
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else{
+            l2.next = mergeTwoLists(l1, l2.next);
+            return l2;
+        }
+    }
 
 }
 
