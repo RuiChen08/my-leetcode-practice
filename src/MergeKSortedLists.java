@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class MergeKSortedLists {
@@ -60,6 +61,27 @@ public class MergeKSortedLists {
             l2.next = mergeTwoLists(l1, l2.next);
             return l2;
         }
+    }
+
+    //Leetcode problem 24
+    /*
+     *Given a linked list, swap every two adjacent nodes and return its head.
+     *
+     *Example:
+     *
+     *Given 1->2->3->4, you should return the list as 2->1->4->3.
+     */
+    public ListNode swapPairs(ListNode head) {
+        if (head == null || head.next == null) return head;
+
+        ListNode pre = head;
+        ListNode mid = pre.next;
+        ListNode nex = mid.next;
+
+        mid.next = pre;
+        pre.next = swapPairs(nex);
+
+        return mid;
     }
 
 }
