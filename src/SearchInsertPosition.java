@@ -1,4 +1,12 @@
-public class SearchInsertPosition {
+import com.sun.istack.internal.NotNull;
+import com.sun.istack.internal.Nullable;
+import com.sun.org.apache.xerces.internal.xs.StringList;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
+public class SearchInsertPosition<E> {
 
     public int searchInsert(int[] nums, int target) {
         if (nums.length == 0) return 0;
@@ -14,5 +22,4 @@ public class SearchInsertPosition {
 
         return nums[lo] <= target ? lo : nums[hi] <= target ? hi : hi + 1;
     }
-
 }
