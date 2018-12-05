@@ -1,11 +1,3 @@
-import com.sun.istack.internal.NotNull;
-import com.sun.istack.internal.Nullable;
-import com.sun.org.apache.xerces.internal.xs.StringList;
-
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-
 public class SearchInsertPosition<E> {
 
     public int searchInsert(int[] nums, int target) {
