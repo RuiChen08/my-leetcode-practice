@@ -4,7 +4,7 @@ public class JumpGame {
 
     public static void main(String[] args) {
         JumpGame j = new JumpGame();
-        System.out.println(j.jump(new int[] {2,3,1,1,4}));
+        System.out.println(j.canJump(new int[] {1,2}));
     }
 
     public int jump(int[] nums) {
@@ -24,4 +24,12 @@ public class JumpGame {
         return nums[nlen - 1];
     }
 
+    public boolean canJump(int[] nums) {
+        int reachable = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i > reachable) return false;
+            reachable = Math.max(i + nums[i], reachable);
+        }
+        return true;
+    }
 }
