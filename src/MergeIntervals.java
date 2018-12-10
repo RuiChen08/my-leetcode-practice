@@ -50,4 +50,5 @@ public class MergeIntervals {
 //        intervals.add(in1);
 //        return intervals;
     }
+
 }
