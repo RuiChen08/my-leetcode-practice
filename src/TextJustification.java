@@ -5,10 +5,10 @@ public class TextJustification {
 
     public static void main(String[] args) {
         TextJustification t = new TextJustification();
-        System.out.println(t.fullJustify(new String[] {"This", "is", "an", "example", "of", "text", "justification."}, 16));
+//        System.out.println(t.fullJustify(new String[] {"This", "is", "an", "example", "of", "text", "justification."}, 16));
     }
 
-    public List<String> fullJustify(String[] words, int maxWidth) {
+//    public List<String> fullJustify(String[] words, int maxWidth) {
         // This is wrong, however, I think this problem is not interesting. So I stopped here.
 //        List<String> ls = new LinkedList<>();
 //        StringBuilder sb = new StringBuilder();
@@ -32,6 +32,6 @@ public class TextJustification {
 //        }
 //        ls.add(sb.toString());
 //        return ls;
-    }
+//    }
 
 }
