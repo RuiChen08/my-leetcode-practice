@@ -1,15 +1,4 @@
-import java.util.Comparator;
-import java.util.List;
-import java.util.PriorityQueue;
-
 public class MergeKSortedLists {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
-
 //    public ListNode mergeKLists(ListNode[] lists) {
 //        if (lists == null || lists.length == 0) return null;
 //
